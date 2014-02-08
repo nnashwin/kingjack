@@ -11,9 +11,16 @@
   background: green;
   height: 600px;
   width: 100%;
-  padding: 5px;
+  padding: 10px 20px;
+  position: relative;
 }
-/* line 14, style.scss */
+/* line 15, style.scss */
 #playfield h1 {
   font-family: "Balthazar";
+}
+/* line 18, style.scss */
+#playfield #strt_btn {
+  position: absolute;
+  left: 50%;
+  top: 20%;
 }

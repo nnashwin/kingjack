@@ -10,8 +10,14 @@
 	background: green;
 	height: 600px;
 	width: 100%;
-	padding: 5px;
+	padding: 10px 20px;
+	position: relative;
 	h1 {
 		font-family: 'Balthazar'
+	}
+	#strt_btn {
+		position: absolute;
+		left: 50%;
+		top: 20%;
 	}
 }
