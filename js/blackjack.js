@@ -1,10 +1,11 @@
 function Deck(){
-	this.hearts = createSuit("H");
+	this.hearts = createSuit("H");//hearts is an object inside object Deck
 	this.spades = createSuit("S");
 	this.clubs = createSuit("C");
 	this.diamonds = createSuit("D");
-	this.deck = createDeck(hearts,spades,clubs,diamonds);
-	
+	this.deck = createDeck(this.hearts,this.spades,this.clubs,this.diamonds);//object deck merges the Deck (note the capital) together
+	this.shuffledeck = shuffle(this.deck);
+
 	function createSuit(suitName){
 		var cardSuit = [];
 		for(var i=2; i<=10; i++){
@@ -15,40 +16,42 @@ function Deck(){
 		cardSuit.push("K_"+suitName);
 		cardSuit.push("A_"+suitName);
 		return cardSuit;
-	};
+	}
 
 	function createDeck(Hearts, Spades, Clubs, Diamonds){
 		var deck = [];
 		for(var i =0; i<4; i++ ){
-			var suit = arugments[i];
+			var suit = arguments[i];
 			for(var k =0; k<13; k++){
 				deck.push(suit[k]);
 			}
 		}
 		return deck;
 	}
-}
+
 
 //this function shuffles array of cards
-var array = [1, 3, 5, 7, 6, 8, 9, 0, 8, 7, 6, 5, 4, 3, 2];
 
-function shuffle(array) {
+	function shuffle(array) {
 	//
-	var m = array.length;
-	var t;//this is an element that is going to be switched 
-	var i;//this is another element that is going to be switched
+		var m = array.length;
+		var t;//this is an element that is going to be switched 
+		var i;//this is another element that is going to be switched
 
-	while (m > 0) {
+		while (m > 0) {
 
-		// Pick a remaining element..
-		i = Math.floor(Math.random() * m--);
+			// Pick a remaining element..
+			i = Math.floor(Math.random() * m--);
 
-		// swapping
-		t = array[m];
-		array[m] = array[i];
-		array[i] = t;
+			// swapping
+			t = array[m];
+			array[m] = array[i];
+			array[i] = t;
 
+		}
+		return array;
 	}
-	return array;
 }
-console.log(shuffle(array));
+var d = new Deck();
+console.log(d.shuffledeck);
+console.log(d.deck.length);
