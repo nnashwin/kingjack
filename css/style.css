@@ -1,0 +1,19 @@
+@import url(http://fonts.googleapis.com/css?family=Balthazar);
+/* line 3, style.scss */
+#container {
+  margin: 0 auto;
+  padding: 0;
+  width: 960px;
+}
+
+/* line 9, style.scss */
+#playfield {
+  background: green;
+  height: 600px;
+  width: 100%;
+  padding: 5px;
+}
+/* line 14, style.scss */
+#playfield h1 {
+  font-family: "Balthazar";
+}

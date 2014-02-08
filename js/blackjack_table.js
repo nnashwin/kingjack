@@ -1,1 +1,5 @@
-console.log('test test');
+$(document).ready(function(){
+	//patience is a virture or something
+	
+
+});
