@@ -17,7 +17,7 @@ function Deck(){
 		cardSuit.push("K_"+suitName);
 		cardSuit.push("A_"+suitName);
 		return cardSuit;
-	}
+	};
 
 	function createDeck(Hearts, Spades, Clubs, Diamonds){
 		var deck = [];
@@ -28,7 +28,7 @@ function Deck(){
 			}
 		}
 		return deck;
-	}
+	};
 
 
 	//this function shuffles array of cards
@@ -51,7 +51,7 @@ function Deck(){
 
 		}
 		return array;
-	}
+	};
 
 	function deal(num){
 		var i = 0;
@@ -66,6 +66,20 @@ function Deck(){
 			}
 		}
 		return dealt;
+	};
+
+	function addToDeck(importDeck){
+		
+		for(var i = 0; i < deck.shuffledeck.length; i++ ){
+			this.deck.push(importDeck[i]);
+		}
+
+		this.deck.shuffle(this.deck);
+		return this.deck;
 	}
 }
-var d = new Deck();
+$(document).ready(){
+	var d = new Deck();
+
+
+}
