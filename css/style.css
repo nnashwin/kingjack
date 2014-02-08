@@ -1,12 +1,12 @@
 @import url(http://fonts.googleapis.com/css?family=Balthazar);
-/* line 3, style.scss */
+/* line 5, style.scss */
 #container {
   margin: 0 auto;
   padding: 0;
   width: 960px;
 }
 
-/* line 9, style.scss */
+/* line 11, style.scss */
 #playfield {
   background: green;
   height: 600px;
@@ -14,13 +14,47 @@
   padding: 10px 20px;
   position: relative;
 }
-/* line 15, style.scss */
+/* line 17, style.scss */
 #playfield h1 {
-  font-family: "Balthazar";
+  font-family: 'Balthazar';
+  display: inline;
 }
-/* line 18, style.scss */
+/* line 21, style.scss */
 #playfield #strt_btn {
   position: absolute;
-  left: 50%;
-  top: 20%;
+  left: 4%;
+  top: 12%;
+}
+/* line 26, style.scss */
+#playfield .guiCard, #playfield #guiDeck {
+  height: 140px;
+  width: 90px;
+  background-color: blue;
+  margin-right: 10px;
+  display: inline-block;
+}
+/* line 33, style.scss */
+#playfield #guiDeck {
+  background-color: red;
+  position: absolute;
+  top: 30px;
+  right: 40px;
+}
+/* line 40, style.scss */
+#playfield #top-player-area, #playfield #btm-player-area {
+  position: absolute;
+  left: 20%;
+  background-color: pink;
+  height: 150px;
+  width: 600px;
+  padding: 10px;
+}
+/* line 48, style.scss */
+#playfield #btm-player-area {
+  bottom: 8%;
+}
+/* line 52, style.scss */
+#playfield .action-btn {
+  float: right;
+  display: inline;
 }
