@@ -1,8 +1,8 @@
 function Deck{
-	var hearts;
-	var spades;
-	var clubs;
-	var diamonds;
+	var hearts = createSuit(H);
+	var spades = createSuit(S);
+	var clubs = createSuit(C);
+	var diamonds = createSuit(D);
 
 	function createSuit(suitName){
 		var cardSuit = [];
@@ -11,6 +11,8 @@ function Deck{
 		}
 		cardSuit.push("J_"+suitName);
 		cardSuit.push("Q_"+suitName);
-		cardSuit.push	
+		cardSuit.push("K_"+suitName);
+		cardSuit.push("A_"+suitName);
+		return cardSuit;
 	}
 }
