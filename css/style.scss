@@ -37,16 +37,17 @@
 		top: 30px;
 		right: 40px;
 	}
-	#top-player-area {
+	#top-player {
 		position: absolute;
 		left: 20%;
-		background-color: pink;
+		// background-color: pink;
+		border: 1px dotted pink;
 		height: 150px;
 		width: 600px;
 		padding: 10px;
 	}
-	#btm-player-area {
-		@extend #top-player-area;
+	#btm-player {
+		@extend #top-player;
 		bottom: 8%;
 	}
 	.action-btn {

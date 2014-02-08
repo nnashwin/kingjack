@@ -41,19 +41,19 @@
   right: 40px;
 }
 /* line 40, style.scss */
-#playfield #top-player-area, #playfield #btm-player-area {
+#playfield #top-player, #playfield #btm-player {
   position: absolute;
   left: 20%;
-  background-color: pink;
+  border: 1px dotted pink;
   height: 150px;
   width: 600px;
   padding: 10px;
 }
-/* line 48, style.scss */
-#playfield #btm-player-area {
+/* line 49, style.scss */
+#playfield #btm-player {
   bottom: 8%;
 }
-/* line 52, style.scss */
+/* line 53, style.scss */
 #playfield .action-btn {
   float: right;
   display: inline;
