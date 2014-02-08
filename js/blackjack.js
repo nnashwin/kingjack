@@ -1,4 +1,5 @@
 function Deck(){
+	
 	this.hearts = createSuit("H");//hearts is an object inside object Deck
 	this.spades = createSuit("S");
 	this.clubs = createSuit("C");
@@ -30,10 +31,10 @@ function Deck(){
 	}
 
 
-//this function shuffles array of cards
+	//this function shuffles array of cards
 
 	function shuffle(array) {
-	//
+	
 		var m = array.length;
 		var t;//this is an element that is going to be switched 
 		var i;//this is another element that is going to be switched
@@ -51,7 +52,20 @@ function Deck(){
 		}
 		return array;
 	}
+
+	function deal(num){
+		var i = 0;
+		var dealt = [];
+		if(deck.length === 0){
+			alert("no more cards in the deck");
+		}
+		else{
+			while(i < num){
+				dealt.push(deck.shift());
+				i++;
+			}
+		}
+		return dealt;
+	}
 }
 var d = new Deck();
-console.log(d.shuffledeck);
-console.log(d.deck.length);
