@@ -132,15 +132,15 @@ function Deck(){
 		return dealt;
 	};
 
-// 	this.addToDeck = function(importDeck){
+	this.addToDeck = function(importDeck){
 		
-// 		for(var i = 0; i < deck.shuffledeck.length; i++ ){
-// 			this.deck.push(importDeck[i]);
-// 		}
+		for(var i = 0; i < deck.shuffledeck.length; i++ ){
+			this.deck.push(importDeck[i]);
+		}
 
-// 		this.deck.shuffle(this.deck);
-// 		return this.deck;
-// 	};
+		this.deck.shuffle(this.deck);
+		return this.deck;
+	};
 }
 
 function blackJack() {
@@ -152,14 +152,11 @@ function blackJack() {
 			currentCard = dealthand[i].substring(0,2);
 			switch (currentCard)
 			{
-				case "J_": value = 10;
-					break;
-
-				case "Q_": value = 11;
-					break;
-
-				case "K_":  value = 12;
-					break;
+				case "10": 
+				case "J_": 
+				case "Q_": 
+				case "K_":  value = 10;
+							break;
 
 				case "2_": value = 2;
 					break;
@@ -177,8 +174,6 @@ function blackJack() {
 					break;
 				case "9_": value = 9;
 					break;
-				case "10": value = 10;
-					break;
 				case "A_": if ( hand > 10) {
 					 value = 1;
 				}else{ value= 11;
@@ -189,13 +184,29 @@ function blackJack() {
 		}
 		return hand;
 	};
+
+	this.hit = function(playerHand, deck){
+		var currentHand = [];
+		if(playerHand.length == 0){
+			currentHand = deck.deal(2);
+		}
+		else if(playerHand.length != 5){
+			currentHand = deck.deal(1);
+		}
+		else{
+			alert("no more cards allowed")
+		}
+		return currentHand;
+	}
 }
+
 $(document).ready(function(){
-	var d = new Deck();
-	var blackJackDealer = new blackJack();
-	var dealthand = d.deal(2);
-	console.log(dealthand);
-	console.log(blackJackDealer.handvalue(dealthand));
+
+	var currentHand = [];
+	var playerHand =[];
+ 	var computerHand = [];
+ 	var gameDeck;
+ 	var game;
 	//patience is a virture or something
 	var deck_position = $('#guiDeck').position();
 	var top_card_count = 0;
@@ -205,11 +216,19 @@ $(document).ready(function(){
 	$('#strt_btn').on("click", function() {
 		console.log("Start Game");
 		$(this).hide();
-		initGame();
+		game = new blackJack();
+		gameDeck = new Deck();
 	});
 
 	$('#hit').on("click", function() {
-		console.log("Pressed Hit");
+		currentHand = game.hit(playerHand, gameDeck);
+		for(var h = 0; h<currentHand.length; h++){
+			playerHand.push(currentHand[h]);
+		}
+		console.log(playerHand);
+		if(playerHand.handvalue(playerHand) == 21{
+			alert("you win")
+		})
 	});
 
 	$('#hold').on("click", function() {
