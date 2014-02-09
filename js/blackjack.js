@@ -186,9 +186,9 @@ function blackJack() {
 	};
 
 	this.rules = function(player_1,player_2) {
-		if(player_2 > 21){ // bust
+		if(player_1 > 21){ // bust
 			alert("Player one wins");
-		}else if(player_1 < 22){
+		}else if(player_2 < 22){
 			if(player_1 > player_2) {
 					alert("Player one wins");
 			}else if(player_2 > player_1){
@@ -201,9 +201,9 @@ function blackJack() {
 			alert("Player two wins");
 		}
 
-		if(player_1 > 21){//bust
-			alert("player one wins");
-		}else if(player_2<22){
+		if(player_2 > 21){//bust
+			alert("player two wins");
+		}else if(player_1<22){
 			if(player_1 > player_2) {
 				alert("player_1 wins");
 			}else if(player_2 > player_1) {
@@ -277,8 +277,9 @@ $(document).ready(function(){
 		for(var h = 0; h<currentHand.length; h++){
 			playerHand.push(currentHand[h]);
 		}
-		console.log(playerHand);
+		
 		playerValue = game.handvalue(playerHand);
+		console.log(playerHand);
 		if(playerValue == 21){
 			$("#hold").click();
 		}
@@ -290,8 +291,8 @@ $(document).ready(function(){
 		for(h = 0; h<cHandLength; h++){
 			computerHand.push(currentHand[h]);
 		}
-		if(game.handvalue(computerHand) == 21 && playerValue !== 21){
-			alert("The Computer has Blackjacked.");
+		if(game.handvalue(computerHand) == 21 || playerValue >= 21){
+			alert("The Computer wins");
 		}else{
 			 compHand = game.computerPlay(computerHand,gameDeck);
 			 var compLength = compHand.length;
