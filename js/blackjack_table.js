@@ -4,6 +4,8 @@ $(document).ready(function() {
 	var top_card_count = 0;
 	var btm_card_count = 0;
 
+	$('.guiCard').fadeTo(0, .1);
+
 	//Buttons & actions
 	$('#strt_btn').on("click", function() {
 		console.log("Start Game");
@@ -29,21 +31,6 @@ $(document).ready(function() {
 		guiDealCard("btm-player");
 	});
 
-	// Functions
-	// 1. Hand Creation
-	// function guiBuildHand(player) {
-	// 	var which_player = player;
-	// 	for (var i = 1; i < 6; i++) {
-	// 		$('#' + which_player).append("<div class=\"guiCard\" id=\"" + which_player + "-" + i + "\"></div>");
-	// 	}
-	// }
-
-	function guiInitHands() {
-		guiBuildHand("top-player");
-		guiBuildHand("btm-player");
-		$('.guiCard').fadeTo(0, 0);
-	}
-
 	// 2. Dealing Triggers
 	function guiDealCard(player) {
 
@@ -57,16 +44,14 @@ $(document).ready(function() {
 		$('#' + which_player + "-" + which_card).fadeTo(1000, 1);
 	}
 
-	// 3. Restart game
+	function animate(){
+		var pos = $('#top-player-1').position();
+		console.log(pos);
+		$('#guiDeck-animate').animate({top: 410, right: 681}, 1500); // 122 to the right
+		// 93 681 top
+		// 410 681
+	}
 
-	//Initialize
-	guiInitHands();
-
-	//beta brah
-	var card_pos = $('#top-player-1').position();
-	$('#guiDeck').animate({
-		top: card_pos.top,
-		left: card_pos.left
-	}, 10000);
-
+	// animate();
+	
 });
