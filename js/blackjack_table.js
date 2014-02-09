@@ -1,5 +1,6 @@
 $(document).ready(function(){
 	//patience is a virture or something
+	var deck_position = $('#guiDeck').position();
 	var top_card_count = 0;
 	var btm_card_count = 0;
 

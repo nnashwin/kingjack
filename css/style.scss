@@ -1,8 +1,14 @@
 @import url(http://fonts.googleapis.com/css?family=Balthazar);
 @import "compass/css3/border-radius";
+@import "compass/css3/text-shadow";
 @import "compass/css3/box-shadow";
 @import "compass/css3/transform"; //TODO
 @import "compass/css3/transition"; //TODO
+
+$default-text-shadow-color: rgba(255, 255, 255, .2);
+$default-text-shadow-blur: 1px;
+$default-text-shadow-v-offset: 2px;
+$default-text-shadow-h-offset: 2px;
 
 h1, h2, h3, p, a {
 	font-family: 'Balthazar';
@@ -14,18 +20,29 @@ h1, h2, h3, p, a {
 	width: 960px;
 }
 
+button {
+	background-color: #ff00;
+	border: none;
+	padding: 5px;
+	font-size: .8em;
+	@include border-radius(6px);
+}
+
 #playfield {
 	background-image: url('../img/grey_wash_wall.png');
+	background-repeat: repeat, no-repeat;
 	height: 600px;
 	width: 100%;
 	padding: 10px 20px;
 	position: relative;
 	h1 {
 		display: inline;
+		font-size: 4.5em;
+		 @include single-text-shadow;
 	}
 	#strt_btn {
 		position: absolute;
-		left: 4%;
+		left: 3%;
 		top: 12%;
 	}
 	.guiCard {
@@ -36,6 +53,7 @@ h1, h2, h3, p, a {
 		display: inline-block;
 		border: 4px solid #ffffff;
 		background-image: url('../img/green_cup.png');
+		background-repeat: repeat, no-repeat;
 		@include box-shadow(black 2px 2px 10px);
 		@include border-radius(6px);
 	}
@@ -63,4 +81,9 @@ h1, h2, h3, p, a {
 		float: right;
 		display: inline;
 	}
+}
+
+// debugger styles
+#debug-tools {
+	bac
 }

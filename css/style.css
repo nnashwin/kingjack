@@ -1,73 +1,72 @@
-@import url(http://fonts.googleapis.com/css?family=Balthazar);
-/* line 7, style.scss */
-h1, h2, h3, p, a {
-  font-family: 'Balthazar';
-}
+/*
+Syntax error: Invalid CSS after "	bac": expected "{", was "}"
+        on line 89 of /Users/vespr_/workspace/devleague/kingjack/css/style.scss
 
-/* line 11, style.scss */
-#container {
-  margin: 0 auto;
-  padding: 0;
-  width: 960px;
-}
-
-/* line 17, style.scss */
-#playfield {
-  background-image: url("../img/grey_wash_wall.png");
-  height: 600px;
-  width: 100%;
-  padding: 10px 20px;
-  position: relative;
-}
-/* line 23, style.scss */
-#playfield h1 {
-  display: inline;
-}
-/* line 26, style.scss */
-#playfield #strt_btn {
-  position: absolute;
-  left: 4%;
-  top: 12%;
-}
-/* line 31, style.scss */
-#playfield .guiCard, #playfield #guiDeck {
-  height: 140px;
-  width: 90px;
-  background-color: blue;
-  margin-right: 10px;
-  display: inline-block;
-  border: 4px solid #ffffff;
-  background-image: url("../img/green_cup.png");
-  -webkit-box-shadow: black 2px 2px 10px;
-  -moz-box-shadow: black 2px 2px 10px;
-  box-shadow: black 2px 2px 10px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -o-border-radius: 6px;
-  border-radius: 6px;
-}
-/* line 42, style.scss */
-#playfield #guiDeck {
-  background-color: red;
-  position: absolute;
-  top: 30px;
-  right: 40px;
-}
-/* line 49, style.scss */
-#playfield #top-player, #playfield #btm-player {
-  position: absolute;
-  left: 20%;
-  height: 150px;
-  width: 600px;
-  padding: 10px;
-}
-/* line 58, style.scss */
-#playfield #btm-player {
-  bottom: 8%;
-}
-/* line 62, style.scss */
-#playfield .action-btn {
-  float: right;
-  display: inline;
-}
+Backtrace:
+/Users/vespr_/workspace/devleague/kingjack/css/style.scss:89
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.14/lib/sass/scss/parser.rb:1147:in `expected'
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.14/lib/sass/scss/parser.rb:1085:in `expected'
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.14/lib/sass/scss/parser.rb:1080:in `tok!'
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.14/lib/sass/scss/parser.rb:534:in `block'
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.14/lib/sass/scss/parser.rb:529:in `ruleset'
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.14/lib/sass/scss/parser.rb:591:in `block in declaration_or_ruleset'
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.14/lib/sass/scss/parser.rb:1123:in `call'
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.14/lib/sass/scss/parser.rb:1123:in `rethrow'
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.14/lib/sass/scss/parser.rb:592:in `declaration_or_ruleset'
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.14/lib/sass/scss/parser.rb:554:in `block_child'
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.14/lib/sass/scss/parser.rb:543:in `block_contents'
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.14/lib/sass/scss/parser.rb:535:in `block'
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.14/lib/sass/scss/parser.rb:529:in `ruleset'
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.14/lib/sass/scss/parser.rb:553:in `block_child'
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.14/lib/sass/scss/parser.rb:546:in `block_contents'
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.14/lib/sass/scss/parser.rb:82:in `stylesheet'
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.14/lib/sass/scss/parser.rb:27:in `parse'
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.14/lib/sass/engine.rb:342:in `_to_tree'
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.14/lib/sass/engine.rb:315:in `_render'
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.14/lib/sass/engine.rb:262:in `render'
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/gems/compass-0.12.2/lib/compass/compiler.rb:140:in `block (2 levels) in compile'
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/gems/compass-0.12.2/lib/compass/compiler.rb:139:in `block in compile'
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/gems/compass-0.12.2/lib/compass/logger.rb:45:in `red'
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/gems/compass-0.12.2/lib/compass/compiler.rb:138:in `compile'
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/gems/compass-0.12.2/lib/compass/compiler.rb:118:in `compile_if_required'
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/gems/compass-0.12.2/lib/compass/compiler.rb:103:in `block (2 levels) in run'
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `each'
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `block in run'
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/gems/compass-0.12.2/lib/compass/compiler.rb:100:in `run'
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/gems/compass-0.12.2/lib/compass/commands/watch_project.rb:147:in `recompile'
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/gems/fssm-0.2.10/lib/fssm/path.rb:73:in `call'
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/gems/fssm-0.2.10/lib/fssm/path.rb:73:in `run_callback'
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/gems/fssm-0.2.10/lib/fssm/path.rb:55:in `callback_action'
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/gems/fssm-0.2.10/lib/fssm/path.rb:35:in `update'
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/gems/fssm-0.2.10/lib/fssm/state/directory.rb:39:in `block in modified'
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/gems/fssm-0.2.10/lib/fssm/state/directory.rb:37:in `each'
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/gems/fssm-0.2.10/lib/fssm/state/directory.rb:37:in `modified'
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/gems/fssm-0.2.10/lib/fssm/state/directory.rb:18:in `refresh'
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/gems/fssm-0.2.10/lib/fssm/backends/rbfsevent.rb:30:in `block in temporary_multipath_handler'
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/gems/fssm-0.2.10/lib/fssm/backends/rbfsevent.rb:27:in `each'
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/gems/fssm-0.2.10/lib/fssm/backends/rbfsevent.rb:27:in `temporary_multipath_handler'
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/gems/fssm-0.2.10/lib/fssm/backends/rbfsevent.rb:17:in `block (2 levels) in run'
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/gems/fssm-0.2.10/lib/fssm/backends/rbfsevent.rb:16:in `each'
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/gems/fssm-0.2.10/lib/fssm/backends/rbfsevent.rb:16:in `block in run'
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/gems/rb-fsevent-0.9.1/lib/rb-fsevent/fsevent.rb:43:in `call'
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/gems/rb-fsevent-0.9.1/lib/rb-fsevent/fsevent.rb:43:in `run'
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/gems/fssm-0.2.10/lib/fssm/backends/rbfsevent.rb:20:in `run'
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/gems/fssm-0.2.10/lib/fssm/monitor.rb:26:in `run'
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/gems/fssm-0.2.10/lib/fssm.rb:70:in `monitor'
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/gems/compass-0.12.2/lib/compass/commands/watch_project.rb:87:in `perform'
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/gems/compass-0.12.2/lib/compass/commands/base.rb:18:in `execute'
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/gems/compass-0.12.2/lib/compass/commands/project_base.rb:19:in `execute'
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/gems/compass-0.12.2/bin/compass:30:in `block in <top (required)>'
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/gems/compass-0.12.2/bin/compass:44:in `call'
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/gems/compass-0.12.2/bin/compass:44:in `<top (required)>'
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/bin/compass:23:in `load'
+/Users/vespr_/.rvm/gems/ruby-2.0.0-p195/bin/compass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Invalid CSS after \"	bac\": expected \"{\", was \"}\"\A         on line 89 of /Users/vespr_/workspace/devleague/kingjack/css/style.scss"; }
