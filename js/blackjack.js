@@ -175,29 +175,58 @@ function blackJack() {
 				case "9_": value = 9;
 					break;
 				case "A_": if ( hand > 10) {
-					 value = 1;
+					value = 1;
 				}else{ value= 11;
 					}
 					break;
 			}
 			hand+=value;
 		}
-		return hand;
+		return hand;	
 	};
+
+			function Rules() {
+		if(player_2.hand.value > 21){ // bust
+			player_1.wins();
+		}else if(player_1.hand.value < 22){
+			if(player_1.hand.value > player_2.hand.value) {
+					player_1.wins();
+			}else if(player_2.hand.value > player_1.hand.value){
+				player_2.wins();
+			}else{
+				alert("No One Wins...");
+			}
+			
+		}else{
+			player_2.wins();
+		}
+
+		if(player_1.hand.value > 21){//bust
+			player_2.wins();
+		}else if(player_2.hand.value<22){
+			if(player_1.hand.value > player_2.hand.value) {
+				player_1.wins();
+			}else if(player_2.hand.value > player_1.hand.value) {
+				player_2.wins();
+			}else{
+				alert("No One Wins...");
+			}
+		}
+		}
 
 	this.hit = function(playerHand, deck){
 		var currentHand = [];
-		if(playerHand.length == 0){
+		if(playerHand.length === 0){
 			currentHand = deck.deal(2);
 		}
 		else if(playerHand.length != 5){
 			currentHand = deck.deal(1);
 		}
 		else{
-			alert("no more cards allowed")
+			alert("no more cards allowed");
 		}
 		return currentHand;
-	}
+	};
 }
 
 $(document).ready(function(){
