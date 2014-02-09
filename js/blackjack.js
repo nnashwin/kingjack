@@ -1,7 +1,7 @@
 function Deck(){
 
 	//create custom decks
-
+	
 	//standard deck
 	this.hearts = createSuit("H");//hearts is an object inside object Deck
 	this.spades = createSuit("S");
@@ -37,7 +37,7 @@ function Deck(){
 
 		//return the array
 		return cardSuit;
-	};
+	}
 
 	/**
 	* createDeck(suits)
@@ -70,7 +70,7 @@ function Deck(){
 		}
 		//return the created deck
 		return cDeck;
-	};
+	}
 
 	/**
 	* shuffle(array)
@@ -81,7 +81,7 @@ function Deck(){
 	* returns 
 	* an array of a shuffled deck
 	*/
-	function shuffle(array) {
+	function shuffle (array) {
 	
 		var m = array.length;
 		var t;//this is an element that is going to be switched 
@@ -100,7 +100,7 @@ function Deck(){
 		}
 
 		return array;
-	};
+	}
 
 	/**
 	* deal(num)
@@ -109,41 +109,92 @@ function Deck(){
 	* integer num = a number of dealt cards. (can only be ints)
 	*
 	* returns 
-	* an array of a dealt cards
+	* an array of dealt cards
 	* null if it can't deal any more cards 
 	*/
-	function deal(num){
+	this.deal = function(num){
 		//make sure the cards are whole cards
 		this.num = Math.floor(num);
 		var i = 0;
 		var dealt = [];
 
 		//check if the deck is empty 
-		if(deck.length === 0){
+		if(this.deck.length === 0){
 			alert("no more cards in the deck");
 			return null;
 		}
 		//push each card to a hand
 		while(i < num){
-			dealt.push(deck.shift());
+			dealt.push(this.deck.shift());
 			i++;
 		}
 
 		return dealt;
 	};
 
-	function addToDeck(importDeck){
+// 	this.addToDeck = function(importDeck){
 		
-		for(var i = 0; i < deck.shuffledeck.length; i++ ){
-			this.deck.push(importDeck[i]);
+// 		for(var i = 0; i < deck.shuffledeck.length; i++ ){
+// 			this.deck.push(importDeck[i]);
+// 		}
+
+// 		this.deck.shuffle(this.deck);
+// 		return this.deck;
+// 	};
+}
+
+function blackJack() {
+	this.handvalue = function(dealthand) {
+		var hand = 0;
+		var value = 0;
+		var currentCard;
+		for (i=0; i<dealthand.length; i++) {
+			currentCard = dealthand[i].substring(0,2);
+			switch (currentCard)
+			{
+				case "J_": value = 10;
+					break;
+
+				case "Q_": value = 11;
+					break;
+
+				case "K_":  value = 12;
+					break;
+
+				case "2_": value = 2;
+					break;
+				case "3_": value = 3;
+					break;
+				case "4_": value = 4;
+					break;
+				case "5_": value = 5;
+					break;
+				case "6_": value = 6;
+					break;
+				case "7_": value = 7;
+					break;
+				case "8_": value = 8;
+					break;
+				case "9_": value = 9;
+					break;
+				case "10": value = 10;
+					break;
+				case "A_": if ( hand > 10) {
+					 value = 1;
+				}else{ value= 11;
+					}
+					break;
+			}
+			hand+=value;
 		}
-
-		this.deck.shuffle(this.deck);
-		return this.deck;
-	}
+		return hand;
+	};
 }
-$(document).ready(){
+$(document).ready(function(){
 	var d = new Deck();
+	var blackJackDealer = new blackJack();
+	var dealthand = d.deal(2);
+	console.log(dealthand);
+	console.log(blackJackDealer.handvalue(dealthand));
 
-
-}
+});
